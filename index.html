@@ -95,6 +95,67 @@
 
     </div>
 
+    <!-- 利用申請フォーム -->
+    <section class="reserve-section">
+      <h2>本日の利用申請</h2>
+
+      <form class="reserve-form" action="#" method="post">
+        <!-- 日付 -->
+        <div class="form-row">
+          <label for="visit-date">利用日</label>
+          <input type="date" id="visit-date" name="visit_date" required>
+        </div>
+
+        <!-- 氏名 -->
+        <div class="form-row">
+          <label for="user-name">氏名</label>
+          <input type="text" id="user-name" name="user_name"
+                 placeholder="例）山田 太郎" required>
+        </div>
+
+        <!-- 食堂利用の有無 -->
+        <div class="form-row">
+          <span class="form-label">本日、食堂を利用しますか？</span>
+          <label class="inline">
+            <input type="radio" name="use_cafeteria" value="yes" required> 利用する
+          </label>
+          <label class="inline">
+            <input type="radio" name="use_cafeteria" value="no"> 利用しない
+          </label>
+        </div>
+
+        <!-- メニュー選択 -->
+        <div class="form-row">
+          <label for="menu-select">注文予定のメニュー</label>
+          <select id="menu-select" name="menu">
+            <option value="">▼選択してください</option>
+            <option value="Aランチ">Aランチ：鶏の照り焼き定食</option>
+            <option value="Bランチ">Bランチ：野菜たっぷりカレー</option>
+            <option value="Cランチ">Cランチ：日替わりパスタ</option>
+            <option value="利用のみ">飲み物・軽食のみ／未定</option>
+          </select>
+          <p class="form-help">
+            ※「利用する」を選んだ方は、できるだけメニューも選択してください。
+          </p>
+        </div>
+
+        <!-- 数量 -->
+        <div class="form-row">
+          <label for="count">数量</label>
+          <select id="count" name="count">
+            <option value="1">1食</option>
+            <option value="2">2食</option>
+            <option value="3">3食</option>
+          </select>
+        </div>
+
+        <!-- 送信 -->
+        <div class="form-row">
+          <button type="submit" class="submit-button">利用を送信</button>
+        </div>
+      </form>
+    </section>
+
     <section class="menu-note">
       <p>※メニュー内容・価格は仕入れ状況により変更になる場合があります。</p>
     </section>
