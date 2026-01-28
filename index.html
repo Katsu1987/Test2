@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>社員食堂メニュー</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>社員食堂メニュー</h1>
+    <p class="date">2026年1月28日（水）</p>
+  </header>
+
+  <main class="menu-container">
+
+    <!-- タブ切り替えエリア -->
+    <div class="tab-wrap">
+      <!-- ラジオボタン（タブ制御） -->
+      <input id="tab-today" type="radio" name="menu-tab" checked>
+      <input id="tab-week" type="radio" name="menu-tab">
+      <input id="tab-nextweek" type="radio" name="menu-tab">
+
+      <!-- タブボタン -->
+      <div class="tab-buttons">
+        <label class="tab-button" for="tab-today">今日</label>
+        <label class="tab-button" for="tab-week">今週</label>
+        <label class="tab-button" for="tab-nextweek">来週</label>
+      </div>
+
+      <!-- 今日のメニュー -->
+      <section class="tab-panel panel-today">
+        <section class="menu-section">
+          <h2>今日のランチ</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="menu-name">Aランチ：鶏の照り焼き定食</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">500円</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-name">Bランチ：野菜たっぷりカレー</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">480円</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-name">Cランチ：日替わりパスタ</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">520円</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- 今週のメニュー -->
+      <section class="tab-panel panel-week">
+        <section class="menu-section">
+          <h2>今週のメニュー</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="menu-name">月：しょうが焼き定食</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">500円</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-name">火：チキン南蛮定食</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">520円</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-name">水：豚キムチ炒め定食</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">500円</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-name">木：白身魚フライ定食</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">510円</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-name">金：ハンバーグ定食</span>
+              <span class="menu-dot"></span>
+              <span class="menu-price">530円</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- 来週のメニュー -->
+      <section class="tab-panel panel-nextweek">
+        <section class="menu-section">
+          <h2>来週のメニュー</h2>
+          <p>来週のメニューは準備中です。</p>
+        </section>
+      </section>
+
+    </div>
+
+    <section class="menu-note">
+      <p>※メニュー内容・価格は仕入れ状況により変更になる場合があります。</p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>社員食堂のご利用ありがとうございます。</p>
+  </footer>
+</body>
+</html>

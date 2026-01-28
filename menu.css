@@ -1,0 +1,235 @@
+/* 共通設定 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Yu Gothic", "游ゴシック体", "YuGothic", "メイリオ", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+.page-header {
+  text-align: center;
+  padding: 24px 16px;
+  background: linear-gradient(120deg, #4caf50, #66bb6a);
+  color: #fff;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(22px, 4vw, 32px);
+}
+
+.page-header .date {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* メインコンテンツ */
+.menu-container {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+/* セクション */
+.menu-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px 20px 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.menu-section h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  border-left: 4px solid #4caf50;
+  padding-left: 8px;
+}
+
+/* メニューリスト */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 16px;
+  gap: 8px;
+}
+
+/* 左：メニュー名 */
+.menu-name {
+  flex: 1;
+}
+
+/* 中央：点線 */
+.menu-dot {
+  flex: 0 0 140px;
+  border-bottom: 1px dotted #bbb;
+}
+
+/* 右：価格 */
+.menu-price {
+  flex: 0 0 80px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 注意書き */
+.menu-note {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+  padding: 0 4px;
+}
+
+/* フッター */
+.page-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  padding: 12px 8px 20px;
+}
+
+/* ==== タブ部分 ==== */
+
+.tab-wrap {
+  margin-bottom: 16px;
+}
+
+/* ラジオボタンは非表示 */
+.tab-wrap input[type="radio"] {
+  display: none;
+}
+
+/* タブボタンの並び */
+.tab-buttons {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+/* タブボタンの見た目 */
+.tab-button {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  background-color: #e0e0e0;
+  color: #555;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #d0d0d0;
+  border-bottom: none;
+}
+
+/* タブの中身はデフォルト非表示 */
+.tab-panel {
+  display: none;
+}
+
+/* 今日タブが選択されたとき */
+#tab-today:checked ~ .tab-buttons label[for="tab-today"] {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #fff;
+  font-weight: bold;
+}
+
+#tab-today:checked ~ .panel-today {
+  display: block;
+}
+
+/* 今週タブ */
+#tab-week:checked ~ .tab-buttons label[for="tab-week"] {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #fff;
+  font-weight: bold;
+}
+
+#tab-week:checked ~ .panel-week {
+  display: block;
+}
+
+/* 来週タブ */
+#tab-nextweek:checked ~ .tab-buttons label[for="tab-nextweek"] {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #fff;
+  font-weight: bold;
+}
+
+#tab-nextweek:checked ~ .panel-nextweek {
+  display: block;
+}
+
+/* ==== レスポンシブ対応 ==== */
+
+/* タブレット以下 */
+@media (max-width: 768px) {
+  .menu-container {
+    margin-top: 16px;
+  }
+
+  .menu-section {
+    padding: 14px 14px 6px;
+  }
+
+  .menu-item {
+    font-size: 15px;
+  }
+}
+
+/* スマホ向け */
+@media (max-width: 600px) {
+
+  .page-header {
+    padding: 16px 12px;
+  }
+
+  .page-header .date {
+    font-size: 12px;
+  }
+
+  .menu-section h2 {
+    font-size: 18px;
+  }
+
+  /* メニューを縦並びに */
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-dot {
+    display: none;
+  }
+
+  .menu-price {
+    flex: initial;
+    text-align: left;
+    margin-top: 4px;
+    color: #4caf50;
+    font-weight: bold;
+  }
+
+  .tab-button {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+}
